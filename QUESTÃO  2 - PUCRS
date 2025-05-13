@@ -1,0 +1,33 @@
+<stdio.h>
+
+long long fatorial(int n) {
+    long long resultado = 1;
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
+
+int main() {
+    int N;
+    double E = 1.0;
+
+    printf("Digite um valor inteiro e positivo para N: ");
+    scanf("%d", &N);
+
+    if (N <= 0) {
+        printf("O valor de N deve ser positivo!\n");
+        return 1;
+    }
+
+    for (int i = 1; i <= N; i++) {
+        E += 1.0 / fatorial(i);
+    }
+
+    printf("O valor de E para N = %d é: %.6f\n", N, E);
+
+    return 0;
+}
+
+
+
