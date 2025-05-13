@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char sexo, cor_olhos[10], cor_cabelos[10];
+    int idade;
+    int total_pessoas = 0, total_masculino = 0, total_feminino = 0;
+    int total_olhos_azuis = 0, total_olhos_verdes = 0, total_olhos_castanhos = 0;
+    int total_cabelos_louros = 0, total_cabelos_castanhos = 0, total_cabelos_pretos = 0;
+    int soma_idades = 0;
+
+    printf("Digite os dados dos habitantes. A entrada de dados será encerrada quando for digitada uma idade negativa.\n");
+
+    // Laço para leitura dos dados
+    while (1) {
+        printf("\nDigite a idade: ");
+        scanf("%d", &idade);
+
+        if (idade < 0
