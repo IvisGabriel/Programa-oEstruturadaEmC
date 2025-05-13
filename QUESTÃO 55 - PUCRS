@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    struct tm data1 = {0}, data2 = {0};
+    time_t t1, t2;
+    double diferenca;
+
+    int dia1, mes1, ano1;
+    int dia2, mes2, ano2;
+
+    // Entrada da primeira data
+    printf("Digite a primeira data (DD MM AAAA): ");
+    scanf("%d %d %d", &dia1, &mes1, &ano1);
+
+    // Entrada da segunda data
+    printf("Digite a segunda data (DD MM AAAA): ");
+    scanf("%d %d %d", &dia2, &mes2, &ano2);
+
+    // Preenchendo struct tm (mês - 1 porque em struct tm vai de 0 a 11)
+    data1.tm_mday = dia1;
+    data1.tm_mon  = mes1 - 1;
+    data1.tm_year = ano1 - 1900;
+
+    data2.tm_mday = dia2;
+    data2.tm_mon  = mes2 - 1;
+    data2.tm_year = ano2 - 1900;
+
+    // Convertendo para time_t
+    t1 = mktime(&data1);
+    t2 = mktime(&data2);
+
+    // Calculando a diferença
+    diferenca = difftime(t2, t1) / (60 * 60 * 24);  // segundos para dias
+
+    // Exibindo o resultado (sempre valor absoluto)
+    printf("Diferença em dias: %.0f\n", diferenca >= 0 ? diferenca : -diferenca);
+
+    return 0;
+}
