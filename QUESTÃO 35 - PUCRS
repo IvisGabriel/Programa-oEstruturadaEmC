@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int sexo, i;
+    float altura, maiorAltura = 0, menorAltura = 300, somaAlturasMulheres = 0, somaAlturasTurma = 0;
+    int qtdMulheres = 0, qtdPessoas = 50;
+
+    // Leitura das 50 informações
+    for (i = 1; i <= qtdPessoas; i++) {
+        printf("Digite a altura da %dª pessoa (em cm): ", i);
+        scanf("%f", &altura);
+
+        printf("Digite o sexo da pessoa (1 para Masculino, 2 para
