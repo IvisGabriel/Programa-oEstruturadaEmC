@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+// Função para calcular o fatorial de um número
+long long fatorial(int m) {
+    long long resultado = 1;
+    for (int i = 1; i <= m; i++) {
+        resultado *= i;
+    }
+    return resultado;
+}
+
+// Função para calcular o número de divisores de um número
+int contar_divis_
