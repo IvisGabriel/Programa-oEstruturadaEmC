@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int valor, totalPositivos = 0, totalNegativos = 0, totalValores = 0;
+    double somaValores = 0.0;
+
+    printf("Digite os valores (digite 0 para encerrar):\n");
+
+    while (1) {
+        scanf("%d", &valor);
+
+        // Condição de parada: quando o valor for 0, o programa encerra
+        if (valor == 0) {
+            break;
+        }
+
+        somaValores += valor;
+        totalValores++;
+
+        // Verifica se o valor é positivo ou negativo
+        if (valor > 0) {
+            totalPositivos++;
+        } else {
+            totalNegativos++;
+        }
+    }
+
+    // Calculando a média aritmética
+    double media = (totalValores > 0) ? somaValores / totalValores : 0.0;
+
+    // Calculando os percentuais
+    double percentualPositivos = (totalValores > 0) ? (totalPositivos * 100.0) / totalValores : 0.0;
+    double percentualNegativos = (totalValores > 0) ? (totalNegativos * 100.0) / totalValores : 0.0;
+
+    // Exibindo os resultados
+    printf("\nResultados:\n");
+    printf("Média aritmética dos valores: %.2f\n", media);
+    printf("Quantidade de valores positivos: %d\n", totalPositivos);
+    printf("Quantidade de valores negativos: %d\n", totalNegativos);
+    printf("Percentual de valores positivos: %.2f%%\n", percentualPositivos);
+    printf("Percentual de valores negativos: %.2f%%\n", percentualNegativos);
+
+    return 0;
+}
