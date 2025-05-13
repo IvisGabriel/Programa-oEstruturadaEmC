@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n; // Número de vezes que 10 será somado
+    int H; // Resultado da soma
+
+    // Leitura do número n
+    printf("Digite o valor de n (número de vezes que 10 será somado): ");
+    scanf("%d", &n);
+
+    // Verificar se n é positivo
+    if (n > 0) {
+        // Cálculo da soma
+        H = 10 * n;
+
+        // Exibir o resultado da soma
+        printf("O valor de H é: %d\n", H);
+    } else {
+        printf("Por favor, insira um valor positivo para n.\n");
+    }
+
+    return 0;
+}
