@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int valor, maior, menor;
+    int soma = 0;
+
+    // A primeira leitura precisa ser feita antes do laço
+    printf("Digite o 1º valor: ");
+    scanf("%d", &valor);
+
+    // Definir o primeiro valor como maior e menor
+    maior = valor;
+    menor = valor;
+
+    soma += valor;
+
+    // Laço para ler os próximos 499 valores
+    for (int i = 2; i <= 500; i++) {
+        printf("Digite o %dº valor: ", i);
+        scanf("%d", &valor);
+
+        // Verificando o maior valor
+        if (valor > maior) {
+            maior = valor;
+        }
+
+        // Verificando o menor valor
+        if (valor < menor) {
+            menor = valor;
+        }
+
+        // Somando o valor à variável soma para calcular a média
+        soma += valor;
+    }
+
+    // Calculando a média
+    float media = soma / 500.0;
+
+    // Exibindo os resultados
+    printf("\nMaior valor: %d\n", maior);
+    printf("Menor valor: %d\n", menor);
+    printf("Média dos valores: %.2f\n", media);
+
+    return 0;
+}
