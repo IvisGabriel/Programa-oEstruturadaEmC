@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float tempo, velocidade, distancia, litros_usados;
+
+    // Solicitar ao usuário o tempo gasto na viagem (em horas)
+    printf("Digite o tempo gasto na viagem (em horas): ");
+    scanf("%f", &tempo);
+
+    // Solicitar ao usuário a velocidade média durante a viagem (em km/h)
+    printf("Digite a velocidade média durante a viagem (em km/h): ");
+    scanf("%f", &velocidade);
+
+    // Calcular a distância percorrida utilizando a fórmula DISTANCIA = TEMPO * VELOCIDADE
+    distancia = tempo * velocidade;
+
+    // Calcular a quantidade de litros de combustível usados utilizando a fórmula LITROS_USADOS = DISTANCIA / 12
+    litros_usados = distancia / 12;
+
+    // Exibir os resultados
+    printf("\nResultados da viagem:\n");
+    printf("Velocidade média: %.2f km/h\n", velocidade);
+    printf("Tempo gasto na viagem: %.2f horas\n", tempo);
+    printf("Distância percorrida: %.2f km\n", distancia);
+    printf("Quantidade de litros de combustível usados: %.2f litros\n", litros_usados);
+
+    return 0;
+}
