@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int matricula, i;
+    float nota;
+    char conceito;
+
+    for (i = 1; i <= 75; i++) {
+        printf("Aluno %d:\n", i);
+        printf("Número de matrícula: ");
+        scanf("%d", &matricula);
+
+        printf("Nota final (0.0 a 10.0): ");
+        scanf("%f", &nota);
+
+        // Determina o conceito com base na nota
+        switch ((int)(nota * 10)) {
+            case 0 ... 49:
+                conceito = 'D';
+                break;
+            case 50 ... 69:
+                conceito = 'C';
+                break;
+            case 70 ... 89:
+                conceito = 'B';
+                break;
+            case 90 ... 100:
+                conceito = 'A';
+                break;
+            default:
+                conceito = '?';  // Nota inválida
+                break;
+        }
+
+        // Exibe os resultados
+        if (conceito == '?') {
+            printf("Nota inválida para o aluno de matrícula %d.\n\n", matricula);
+        } else {
+            printf("Matrícula: %d - Nota: %.1f - Conceito: %c\n\n", matricula, nota, conceito);
+        }
+    }
+
+    return 0;
+}
