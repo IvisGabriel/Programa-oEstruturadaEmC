@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    char sexo, olhos, cabelos;
+    int idade;
+    int maior_idade = 0;
+    int contador = 0;
+    int mulheres_verdes_louros = 0;
+
+    while (contador < 500) {
+        printf("Pessoa %d\n", contador + 1);
+        printf("Sexo (M/F): ");
+        scanf(" %c", &sexo);
+
+        printf("Cor dos olhos (A-azuis, V-verdes, C-castanhos): ");
+        scanf(" %c", &olhos);
+
+        printf("Cor dos cabelos (L-louros, C-castanhos, P-pretos): ");
+        scanf(" %c", &cabelos);
+
+        printf("Idade: ");
+        scanf("%d", &idade);
+
+        // Atualiza a maior idade
+        if (idade > maior_idade) {
+            maior_idade = idade;
+        }
+
+        // Verifica condição para mulheres entre 18 e 35 anos com olhos verdes e cabelos louros
+        if (sexo == 'F' || sexo == 'f') {
+            if (idade >= 18 && idade <= 35 && (olhos == 'V' || olhos == 'v') && (cabelos == 'L' || cabelos == 'l')) {
+                mulheres_verdes_louros++;
+            }
+        }
+
+        contador++;
+        printf("\n");
+    }
+
+    // Resultados
+    printf("\nRESULTADOS:\n");
+    printf("Maior idade do grupo: %d anos\n", maior_idade);
+    printf("Quantidade de mulheres com idade entre 18 e 35, olhos verdes e cabelos louros: %d\n", mulheres_verdes_louros);
+
+    return 0;
+}
