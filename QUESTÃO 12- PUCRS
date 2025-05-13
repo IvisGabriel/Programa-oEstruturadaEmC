@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    // Laço para ler 20 valores de n
+    for (int i = 0; i < 20; i++) {
+        printf("Digite o valor de n para a tabuada %d: ", i + 1);
+        scanf("%d", &n);
+
+        printf("\nTabuada de %d:\n", n);
+
+        // Laço para exibir a tabuada de 1 até n
+        for (int i = 1; i <= n; i++) {
+            printf("%d x %d = %d\n", i, n, i * n);
+        }
+
+        printf("\n");  // Linha em branco entre as tabuadas
+    }
+
+    return 0;
+}
