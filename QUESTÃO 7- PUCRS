@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int codigo;
+    double nota1, nota2, nota3, media;
+
+    // Laço para ler os dados dos alunos
+    while (1) {
+        // Lê o código do aluno
+        printf("Digite o código do aluno (0 para encerrar): ");
+        scanf("%d", &codigo);
+
+        // Encerra o programa se o código for 0
+        if (codigo == 0) {
+            break;
+        }
+
+        // Lê as 3 notas do aluno
+        printf("Digite as 3 notas do aluno %d:\n", codigo);
+        printf("Nota 1: ");
+        scanf("%lf", &nota1);
+        printf("Nota 2: ");
+        scanf("%lf
