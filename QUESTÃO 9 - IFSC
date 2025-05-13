@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nome[50], sobrenome[50], nomeCompleto[100];
+
+    // Passo a) Ler o nome
+    printf("Digite o seu nome: ");
+    fgets(nome, sizeof(nome), stdin);
+    // Remove o '\n' que pode ser adicionado pelo fgets
+    nome[strcspn(nome, "\n")] = '\0';
+
+    // Passo b) Ler o sobrenome
+    printf("Digite o seu sobrenome: ");
+    fgets(sobrenome, sizeof(sobrenome), stdin);
+    // Remove o '\n' que pode ser adicionado pelo fgets
+    sobrenome[strcspn(sobrenome, "\n")] = '\0';
+
+    // Passo c) Concatenar nome e sobrenome
+    strcpy(nomeCompleto, nome);        // Copia o nome para nomeCompleto
+    strcat(nomeCompleto, " ");         // Adiciona um espaço
+    strcat(nomeCompleto, sobrenome);   // Adiciona o sobrenome
+
+    // Passo d) Apresentar o nome completo
+    printf("Nome completo: %s\n", nomeCompleto);
+
+    return 0;
+}
