@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int idade, menor_idade = 1000, maior_idade = 0;
+    char sexo;
+    float salario, soma_salarios = 0, total_salarios = 0;
+    int mulheres_salario_ate_100 = 0;
+    int total_pessoas = 0;
+
+    printf("Digite os dados de idade, sexo (M/F) e salário. Digite uma idade negativa para encerrar.\n");
+
+    // Laço para ler os dados de várias pessoas
+    while (1) {
+        // Leitura dos dados
+        printf("Idade: ");
+        scanf("%d", &idade);
+
+        // Condição de parada: se a idade for negativa, encerra
+        if (idade < 0) {
+            break;
+        }
+
+        printf("Sexo (M/F): ");
+        scanf(" %c", &sexo);  // O espaço antes de %c é para limpar o buffer de entrada
+        printf("Salário: ");
+        scanf("%f", &salario);
+
+        // Atualiza a maior e menor idade
+        if (idade > maior_idade) {
+            maior_idade = idade;
+        }
+        if (idade < menor_idade) {
+            menor_idade = idade;
+        }
+
+        // Soma os salários e conta a quantidade de pessoas
+        soma_salarios += salario;
+        total_salarios++;
+
+        // Conta a quantidade de mulheres com salário até R$100,00
+        if (sexo == 'F' || sexo == 'f') {
+            if
