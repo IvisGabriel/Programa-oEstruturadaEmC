@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Função que verifica se um número é primo
+bool ehPrimo(int num) {
+    if (num <= 1) {
+        return false;  // Números menores ou iguais a 1 não são primos
+    }
+    for (int i = 2; i * i <= num; i++) {  // Verifica até a raiz quadrada do número
+        if (num % i == 0) {
+            return false;  // Se for divisível por qualquer número, não é primo
+        }
+    }
+    return true;  // Se não for divisível, é primo
+}
+
+int main() {
+    int produto = 1;  // Inicializa o produto como 1
+
+    // Laço que percorre os números entre 92 e 1478
+    for (int i = 93; i <= 1478; i++) {
+        if (ehPrimo(i)) {
+            produto *= i;  // Multiplica os números primos no produto
+        }
+    }
+
+    // Exibe o resultado
+    printf("O produto dos números primos entre 92 e 1478 é: %d\n", produto);
+
+    return 0;
+}
