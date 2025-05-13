@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int n, filhos, pessoas_salario_ate_100 = 0;
+    double salario, soma_salarios = 0, soma_filhos = 0, maior_salario = 0;
+    
+    printf("Digite o número de pessoas na pesquisa: ");
+    scanf("%d", &n);
+    
+    for (int i = 1; i <= n; i++) {
+        printf("Pessoa %d:\n", i);
+        printf("Digite o salário: R$ ");
+        scanf("%lf", &salario);
+        printf("Digite o número de filhos: ");
+        scanf("%d", &filhos);
+        
+        soma_salarios += salario;
+        soma_filhos += filhos;
+        
+        if (salario > maior_salario) {
+            maior_salario = salario;
+        }
+        
+        if (salario <= 100.0) {
+            pessoas_salario_ate_100++;
+        }
+    }
+
+    double media_salarios = soma_salarios / n;
+    double media_filhos = soma_filhos / n;
+    double percentual_salario_ate_100 = (pessoas_salario_ate_100 / (double)n) * 100;
+    
+    printf("\nResultados da pesquisa:\n");
+    printf("a) Média do salário da população: R$ %.2f\n", media_salarios);
+    printf("b) Média do número de filhos: %.2f\n", media_filhos);
+    printf("c) Maior salário: R$ %.2f\n", maior_salario);
+    printf("d) Percentual de pessoas com salário até R$100,00: %.2f%%\n", percentual_salario_ate_100);
+
+    return 0;
+}
