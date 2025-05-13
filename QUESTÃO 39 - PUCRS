@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+// Função que verifica se um número é perfeito
+int ehPerfeito(int num) {
+    int somaDivisores = 0;
+
+    // Laço para encontrar os divisores de 'num'
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            somaDivisores += i;  // Adiciona o divisor à soma
+        }
+    }
+
+    // Verifica se a soma dos divisores é igual ao número
+    if (somaDivisores == num) {
+        return 1;  // Número perfeito
+    } else {
+        return 0;  // Não é perfeito
+    }
+}
+
+int main() {
+    int count = 0;  // Contador para controlar quantos números perfeitos já foram encontrados
+    int num = 6;    // Começa com o primeiro número perfeito (6)
+
+    // Laço para encontrar os 5 primeiros números perfeitos
+    while (count < 5) {
+        if (ehPerfeito(num)) {
+            printf("%d é um número perfeito\n", num);
+            count++;  // Incrementa o contador quando encontra um número perfeito
+        }
+        num++;  // Vai para o próximo número
+    }
+
+    return 0;
+}
