@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int idade, menor_idade = 1000, maior_idade = 0;
+    int idade, maior_idade = 0, menor_idade = 1000;
     char sexo;
     float salario, soma_salarios = 0, total_salarios = 0;
     int mulheres_salario_ate_100 = 0;
-    int total_pessoas = 0;
 
-    printf("Digite os dados de idade, sexo (M/F) e salário. Digite uma idade negativa para encerrar.\n");
+    // Início da leitura de dados
+    printf("Digite os dados de idade, sexo (M/F) e salário.\n");
+    printf("A entrada de dados será encerrada quando for digitada uma idade negativa.\n");
 
-    // Laço para ler os dados de várias pessoas
+    // Laço enquanto (enquanto-faça)
     while (1) {
-        // Leitura dos dados
         printf("Idade: ");
         scanf("%d", &idade);
 
@@ -38,5 +38,20 @@ int main() {
         total_salarios++;
 
         // Conta a quantidade de mulheres com salário até R$100,00
-        if (sexo == 'F' || sexo == 'f') {
-            if
+        if ((sexo == 'F' || sexo == 'f') && salario <= 100.0) {
+            mulheres_salario_ate_100++;
+        }
+    }
+
+    // Exibe os resultados
+    if (total_salarios > 0) {
+        printf("\nMédia de salário do grupo: %.2f\n", soma_salarios / total_salarios);
+        printf("Maior idade do grupo: %d\n", maior_idade);
+        printf("Menor idade do grupo: %d\n", menor_idade);
+        printf("Quantidade de mulheres com salário até R$100,00: %d\n", mulheres_salario_ate_100);
+    } else {
+        printf("\nNenhuma pessoa foi cadastrada.\n");
+    }
+
+    return 0;
+}
