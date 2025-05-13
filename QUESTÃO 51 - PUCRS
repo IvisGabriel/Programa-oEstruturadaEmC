@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fatorial = 1;
+
+    printf("Digite um número inteiro
