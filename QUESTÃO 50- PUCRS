@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, i;
+    unsigned long long potencia = 1;
+
+    // Leitura dos valores
+    printf("Digite o valor de X (base): ");
+    scanf("%d", &X);
+
+    printf("Digite o valor de Y (expoente): ");
+    scanf
