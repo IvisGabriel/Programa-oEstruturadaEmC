@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Leitura dos 5 pares de valores
+    for (int i = 1; i <= 5; i++) {
+        printf("Digite o %dº par de valores (a b): ", i);
+        scanf("%d %d", &a, &b);
+
+        // Verificando se a < b e se ambos são positivos
+        if (a < b && a > 0 && b > 0) {
+            printf("Numeros pares entre %d e %d: ", a, b);
+
+            // Ajusta 'a' para ser o próximo número par se não for
+            if (a % 2 != 0) {
+                a++; // Se 'a' for ímpar, vai para o próximo número par
+            }
+
+            // Imprime todos os números pares entre a e b, inclusive
+            for (int i = a; i <= b; i += 2) {
+                printf("%d ", i);
+            }
+
+            printf("\n"); // Nova linha após a lista de números pares
+        } else {
+            printf("Valores inválidos, 'a' deve ser menor que 'b' e ambos devem ser positivos.\n
