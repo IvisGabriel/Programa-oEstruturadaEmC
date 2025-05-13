@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+#define PI 3.14159  // Definindo a constante PI
+
+int main() {
+    float AREA, RAIO;
+
+    // Solicitar o valor do raio
+    printf("Digite o valor do raio da circunferência: ");
+    scanf("%f", &RAIO);
+
+    // Calcular a área
+    AREA = PI * (RAIO * RAIO);
+
+    // Exibir o resultado
+    printf("A área da circunferência é: %.2f\n", AREA);
+
+    return 0;
+}
