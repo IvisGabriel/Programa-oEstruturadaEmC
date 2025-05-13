@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int numero, soma_negativos = 0;
+
+    printf("Digite os números inteiros (digite 0 para encerrar):\n");
+
+    // Laço para ler os números até que seja digitado 0
+    while (1) {
+        // Leitura do número
+        scanf("%d", &numero);
+
+        // Condição de parada: se o número for 0, o programa termina
+        if (numero == 0) {
+            break;
+        }
+
+        // Se o número for negativo, adiciona à soma dos negativos
+        if (numero < 0) {
+            soma_negativos += numero;
+        }
+    }
+
+    // Exibe o resultado da soma dos números negativos
+    printf("Somatório dos números negativos: %d\n", soma_negativos);
+
+    return 0;
+}
