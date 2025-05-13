@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    int valores[5][4]; // Matriz para armazenar 5 grupos de 4 valores
+    int i, j, temp;
+
+    // Leitura dos 5 grupos de 4 valores
+    for (i = 0; i < 5; i++) {
+        printf("Digite os 4 valores para o grupo %d:\n", i + 1);
+        for (j = 0; j < 4; j++) {
+            printf("Valor %d: ", j + 1);
+            scanf("%d", &valores[i][j]);
+        }
+    }
+
+    // Exibição dos valores na ordem lida
+    printf("\nValores lidos (na ordem lida):\n");
+    for (i = 0; i < 5; i++) {
+        printf("Grupo %d: ", i + 1);
+        for (j = 0; j < 4; j++) {
+            printf("%d ", valores[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Ordenação dos valores em ordem decrescente
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 3; j++) {
+            for (int k = j + 1; k < 4; k++) {
+                if (valores[i][j] < valores[i][k]) {
+                    // Troca os valores
+                    temp = valores[i][j];
+                    valores[i][j] = valores[i][k];
+                    valores[i][k] = temp;
+                }
+            }
+        }
+    }
+
+    // Exibição dos valores ordenados em ordem decrescente
+    printf("\nValores ordenados em ordem decrescente:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Grupo %d: ", i + 1);
+        for (j = 0; j < 4; j++) {
+            printf("%d ", valores[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
