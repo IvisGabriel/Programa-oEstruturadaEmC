@@ -1,0 +1,139 @@
+a)(𝐴+𝐵)×𝐶
+
+(A+B)×C
+
+#include <stdio.h>
+
+int main() {
+    int A, B, C, Resultado;
+
+    // Leitura dos valores de A, B e C
+    printf("Digite A: ");
+    scanf("%d", &A);
+    printf("Digite B: ");
+    scanf("%d", &B);
+    printf("Digite C: ");
+    scanf("%d", &C);
+
+    // Cálculo
+    Resultado = (A + B) * C;
+
+    // Exibição do resultado
+    printf("Resultado: %d\n", Resultado);
+
+    return 0;
+}
+
+b)𝑇𝑂𝑇𝐴𝐿𝑁 / N
+
+TOTAL
+​
+#include <stdio.h>
+
+int main() {
+    float TOTAL, N, Resultado;
+
+    // Leitura dos valores de TOTAL e N
+    printf("Digite o TOTAL: ");
+    scanf("%f", &TOTAL);
+    printf("Digite N: ");
+    scanf("%f", &N);
+
+    // Cálculo
+    Resultado = TOTAL / N;
+
+    // Exibição do resultado
+    printf("Resultado: %.2f\n", Resultado);
+
+    return 0;
+}
+
+
+c) 𝐴−𝐵×(𝐶+𝐷2)/𝐸A−B×(C+D2 )/E
+
+
+#include <stdio.h>
+#include <math.h>  // Para usar a função pow() para calcular potências
+
+int main() {
+    int A, B, C, D, E;
+    float Resultado;
+
+    // Leitura dos valores de A, B, C, D e E
+    printf("Digite A: ");
+    scanf("%d", &A);
+    printf("Digite B: ");
+    scanf("%d", &B);
+    printf("Digite C: ");
+    scanf("%d", &C);
+    printf("Digite D: ");
+    scanf("%d", &D);
+    printf("Digite E: ");
+    scanf("%d", &E);
+
+    // Cálculo
+    Resultado = A - B * (C + pow(D, 2)) / E;
+
+    // Exibição do resultado
+    printf("Resultado: %.2f\n", Resultado);
+
+    return 0;
+}
+
+
+d) base expoente
+
+
+base 
+expoente
+ 
+
+#include <stdio.h>
+#include <math.h>  // Para usar a função pow() para calcular potências
+
+int main() {
+    int base, expoente;
+    double Resultado;
+
+    // Leitura dos valores de base e expoente
+    printf("Digite a base: ");
+    scanf("%d", &base);
+    printf("Digite o expoente: ");
+    scanf("%d", &expoente);
+
+    // Cálculo
+    Resultado = pow(base, expoente);
+
+    // Exibição do resultado
+    printf("Resultado: %.2f\n", Resultado);
+
+    return 0;
+}
+
+
+e) 𝑎×𝑏𝑐a×b c
+ 
+
+#include <stdio.h>
+#include <math.h>  // Para usar a função pow() para calcular potências
+
+int main() {
+    int a, b, c;
+    double Resultado;
+
+    // Leitura dos valores de a, b e c
+    printf("Digite a: ");
+    scanf("%d", &a);
+    printf("Digite b: ");
+    scanf("%d", &b);
+    printf("Digite c: ");
+    scanf("%d", &c);
+
+    // Cálculo
+    Resultado = a * pow(b, c);
+
+    // Exibição do resultado
+    printf("Resultado: %.2f\n", Resultado);
+
+    return 0;
+}
