@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float HT, VH, PD, SB, TD, SL;
+
+    // Passo a) Obter o valor para a variável HT (horas trabalhadas no mês)
+    printf("Digite o número de horas trabalhadas no mês: ");
+    scanf("%f", &HT);
+
+    // Passo b) Obter o valor para a variável VH (valor hora trabalhada)
+    printf("Digite o valor da hora trabalhada: ");
+    scanf("%f", &VH);
+
+    // Passo c) Obter o valor para a variável PD (percentual de desconto)
+    printf("Digite o percentual de desconto: ");
+    scanf("%f", &PD);
+
+    // Passo d) Calcular o salário bruto (SB = HT * VH)
+    SB = HT * VH;
+
+    // Passo e) Calcular o total de desconto (TD = (PD / 100) * SB)
+    TD = (PD / 100) * SB;
+
+    // Passo f) Calcular o salário líquido (SL = SB - TD)
+    SL = SB - TD;
+
+    // Passo g) Apresentar os valores de: Horas trabalhadas, Salário Bruto, Desconto, Salário Líquido
+    printf("\nResultado:\n");
+    printf("Horas trabalhadas: %.2f\n", HT);
+    printf("Salário Bruto: %.2f\n", SB);
+    printf("Desconto: %.2f\n", TD);
+    printf("Salário Líquido: %.2f\n", SL);
+
+    return 0;
+}
