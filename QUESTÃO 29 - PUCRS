@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+    int soma = 0;
+    int contador = 0;
+
+    printf("Digite os numeros (digite um numero fora do intervalo 13 a 73 para terminar):\n");
+
+    while (1) {
+        // Leitura do número
+        scanf("%d", &numero);
+
+        // Verifica se o número está no intervalo de 13 a 73
+        if (
