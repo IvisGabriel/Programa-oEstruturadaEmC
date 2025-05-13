@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float raio, altura, volume;
+
+    // Solicitar ao usuário o valor do raio
+    printf("Digite o valor do raio da lata (em cm): ");
+    scanf("%f", &raio);
+
+    // Solicitar ao usuário o valor da altura
+    printf("Digite o valor da altura da lata (em cm): ");
+    scanf("%f", &altura);
+
+    // Calcular o volume usando a fórmula
+    volume = 3.14159 * raio * raio * altura;
+
+    // Exibir o volume calculado
+    printf("O volume da lata de oleo é: %.2f cm³\n", volume);
+
+    return 0;
+}
