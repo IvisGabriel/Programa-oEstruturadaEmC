@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    int codigo;
+    float preco_custo, preco_novo;
+    float soma_preco_custo = 0, soma_preco_novo = 0;
+    int quantidade_produtos = 0;
+
+    printf("Digite os dados dos produtos. A entrada de dados será encerrada quando o código do produto for negativo.\n");
+
+    // Laço para leitura dos dados dos produtos
+    while (1) {
+        printf("\nDigite o código do produto: ");
+        scanf("%d", &codigo);
+
+        // Encerra a leitura quando o código do produto for negativo
+        if (codigo < 0) {
+            break;
+        }
+
+        printf("Digite o preço de custo do produto: ");
+        scanf("%f", &preco_custo);
+
+        // Calculando o novo preço com aumento de 20%
+        preco_novo = preco_custo * 1.20;
+
+        // Acumulando os valores para cálculo das médias
+        soma_preco_custo += preco_custo;
+        soma_preco_novo += preco_novo;
+
+        // Incrementando a quantidade de produtos
+        quantidade_produtos++;
+
+        // Exibindo o código e o preço novo do produto
+        printf("Código: %d | Preço de custo: %.2f | Preço novo (com aumento): %.2f\n", codigo, preco_custo, preco_novo);
+    }
+
+    // Verificando se pelo menos um produto foi cadastrado
+    if (quantidade_produtos > 0) {
+        // Calculando as médias
+        float media_preco_custo = soma_preco_custo / quantidade_produtos;
+        float media_preco_novo = soma_preco_novo / quantidade_produtos;
+
+        // Exibindo as médias
+        printf("\nMédia dos preços de custo: %.2f\n", media_preco_custo);
+        printf("Média dos preços novos (com aumento): %.2f\n", media_preco_novo);
+    } else {
+        printf("\nNenhum produto foi cadastrado.\n");
+    }
+
+    return 0;
+}
