@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    a) (20 - 15) / 2
+    int a = (20 - 15) / 2;
+    printf("a) (20 - 15) / 2 = %d (Inteiro)\n", a);
+
+    b) 20 - 15 / 2
+    int b = 20 - 15 / 2;
+    printf("b) 20 - 15 / 2 = %d (Inteiro)\n", b);
+
+    c) 2 * 5 / 20 + 30 / 15 * 2
+    float c = 2 * 5 / 20.0 + 30 / 15.0 * 2;
+    printf("c) 2 * 5 / 20 + 30 / 15 * 2 = %.2f (Real)\n", c);
+
+    d) 2 * (5 / 20) + 30 / (15 * 2)
+    float d = 2 * (5 / 20.0) + 30 / (15.0 * 2);
+    printf("d) 2 * (5 / 20) + 30 / (15 * 2) = %.2f (Real)\n", d);
+
+    e) 23 div 4 --> 23 / 4, divisão inteira
+    int e = 23 / 4;
+    printf("e) 23 div 4 = %d (Inteiro)\n", e);
+
+    f) 23 mod 4 --> 23 % 4, resto da divisão
+    int f = 23 % 4;
+    printf("f) 23 mod 4 = %d (Inteiro)\n", f);
+
+    g) 35 div 6 + 2 --> 35 / 6, divisão inteira
+    int g = 35 / 6 + 2;
+    printf("g) 35 div 6 + 2 = %d (Inteiro)\n", g);
+
+    h) 35 div 6 - 2 --> 35 / 6, divisão inteira
+    int h = 35 / 6 - 2;
+    printf("h) 35 div 6 - 2 = %d (Inteiro)\n", h);
+
+    i) 35 div 6 * 2 --> 35 / 6, divisão inteira
+    int i = 35 / 6 * 2;
+    printf("i) 35 div 6 * 2 = %d (Inteiro)\n", i);
+
+    j) sqrt(625)
+    double j = sqrt(625);
+    printf("j) sqrt(625) = %.2f (Real)\n", j);
+
+    k) sqr(20) --> sqr é o quadrado de 20
+    int k = 20 * 20;
+    printf("k) sqr(20) = %d (Inteiro)\n", k);
+
+     l) 2 + sqrt(21 div 5)
+    int l = 21 / 5;
+    double l_result = sqrt(l);
+    double result_l = 2 + l_result;
+    printf("l) 2 + sqrt(21 div 5) = %.2f (Real)\n", result_l);
+
+    return 0;
+}
