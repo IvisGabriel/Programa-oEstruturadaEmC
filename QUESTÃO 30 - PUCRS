@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    // Laço para percorrer os números entre 100 e 200
+    for (int i = 101; i < 200; i += 2) {
+        printf("%d\n", i);  // Imprime o número ímpar
+    }
+
+    return 0;
+}
