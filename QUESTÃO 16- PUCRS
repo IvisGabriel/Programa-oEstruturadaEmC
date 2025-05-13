@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double valor;
+    int contador = 0;
+
+    printf("Digite os valores (digite um valor negativo para encerrar):\n");
+
+    // Laço para ler os valores enquanto o número não for negativo
+    while (1) {
+        scanf("%lf", &valor);
+
+        // Condição de parada: número negativo
+        if (valor < 0) {
+            break;
+        }
+
+        // Se for o primeiro valor ou múltiplos de 20, imprime o cabeçalho
+        if (contador % 20 == 0) {
+            printf("\nTabela:\n");
+            printf("Valor   | Quadrado | Cubo    | Raiz Quadrada\n");
+            printf("--------------------------------------------\n");
+        }
+
+        // Exibe o valor, seu quadrado, seu cubo e sua raiz quadrada
+        printf("%-8.2lf | %-8.2lf | %-8.2lf | %-15.2lf\n", valor, valor * valor, valor * valor * valor, sqrt(valor));
+
+        // Incrementa o contador
+        contador++;
+    }
+
+    return 0;
+}
