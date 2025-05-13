@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    float comprimento, largura, altura, volume;
+
+    // Leitura dos valores para comprimento, largura e altura
+    printf("Digite o comprimento da caixa: ");
+    scanf("%f", &comprimento);
+
+    printf("Digite a largura da caixa: ");
+    scanf("%f", &largura);
+
+    printf("Digite a altura da caixa: ");
+    scanf("%f", &altura);
+
+    // Cálculo do volume
+    volume = comprimento * largura * altura;
+
+    // Exibição do resultado
+    printf("O volume da caixa retangular é: %.2f\n", volume);
+
+    return 0;
+}
