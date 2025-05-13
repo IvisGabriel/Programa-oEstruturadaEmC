@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int m, n;
+
+    printf("Digite os pares de valores m e n (m e n positivos, digite 0 0 para encerrar):\n");
+
+    // Laço para ler os pares de valores m e n
+    while (1) {
+        // Leitura dos valores de m e n
+        scanf("%d %d", &m, &n);
+
+        // Condição de parada: se m e n forem 0, o programa termina
+        if (m == 0 && n == 0) {
+            break;
+        }
+
+        // Cal
