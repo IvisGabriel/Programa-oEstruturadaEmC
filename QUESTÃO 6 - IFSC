@@ -1,0 +1,9 @@
+( ) teste = cod OU ((x)*2 <> soma): FALSO
+
+( ) tudo = soma: FALSO
+
+( ) x = nome >= cor: FALSO
+
+( ) cod = cor = 'verde': FALSO
+
+(X) tudo = NÃO teste OU cod E (soma < x): VERDADEIRO
