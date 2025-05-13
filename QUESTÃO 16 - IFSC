@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    int A, B, aux;
+
+    // Leitura dos valores para as variáveis A e B
+    printf("Digite o valor para A: ");
+    scanf("%d", &A);
+    printf("Digite o valor para B: ");
+    scanf("%d", &B);
+
+    // Exibição dos valores antes da troca
+    printf("\nAntes da troca:\n");
+    printf("A = %d, B = %d\n", A, B);
+
+    // Realizando a troca usando uma variável auxiliar
+    aux = A;
+    A = B;
+    B = aux;
+
+    // Exibição dos valores após a troca
+    printf("\nApós a troca:\n");
+    printf("A = %d, B = %d\n", A, B);
+
+    return 0;
+}
