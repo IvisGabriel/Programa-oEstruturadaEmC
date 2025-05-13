@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração das variáveis
+    int A, B, C, D;
+
+    // Leitura dos valores de A, B, C e D
+    printf("Digite o valor para A: ");
+    scanf("%d", &A);
+    printf("Digite o valor para B: ");
+    scanf("%d", &B);
+    printf("Digite o valor para C: ");
+    scanf("%d", &C);
+    printf("Digite o valor para D: ");
+    scanf("%d", &D);
+
+    // Apresentar os resultados da adição e multiplicação utilizando a propriedade distributiva
+
+    // Somando e multiplicando as combinações conforme a propriedade distributiva
+    printf("\nResultados da adição e multiplicação:\n");
+
+    // Soma e multiplicação: A com B, A com C, A com D
+    printf("A + B = %d\n", A + B);
+    printf("A * B = %d\n", A * B);
+    
+    printf("A + C = %d\n", A + C);
+    printf("A * C = %d\n", A * C);
+    
+    printf("A + D = %d\n", A + D);
+    printf("A * D = %d\n", A * D);
+
+    // Soma e multiplicação: B com C, B com D
+    printf("B + C = %d\n", B + C);
+    printf("B * C = %d\n", B * C);
+
+    printf("B + D = %d\n", B + D);
+    printf("B * D = %d\n", B * D);
+
+    // Soma e multiplicação: C com D
+    printf("C + D = %d\n", C + D);
+    printf("C * D = %d\n", C * D);
+
+    return 0;
+}
