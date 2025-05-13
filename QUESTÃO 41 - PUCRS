@@ -1,26 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    float n1, n2, n3, mediaPonderada;
+    float n1, n2, n3, mediaPonderada, mediaGeral = 0;
     int i;
 
-    // Laço para ler as notas dos 50 alunos
+    // Laço para ler as notas de 50 alunos
     for (i = 1; i <= 50; i++) {
         // Leitura das 3 notas para o aluno i
         printf("Digite as notas do aluno %d:\n", i);
         printf("Nota 1: ");
         scanf("%f", &n1);
         printf("Nota 2: ");
-        scanf("%f", &n2);
-        printf("Nota 3: ");
-        scanf("%f", &n3);
-
-        // Cálculo da média ponderada (MP)
-        mediaPonderada = (n1 * 2 + n2 * 4 + n3 * 3) / 10;
-
-        // Exibe a média ponderada do aluno
-        printf("Média ponderada do aluno %d: %.2f\n\n", i, mediaPonderada);
-    }
-
-    return 0;
-}
