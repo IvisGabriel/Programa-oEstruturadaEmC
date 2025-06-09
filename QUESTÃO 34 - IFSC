@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    // Lê os três valores
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &b);
+
+    printf("Digite o terceiro valor: ");
+    scanf("%d", &c);
+
+    // Ordena e imprime os valores em ordem crescente
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    if (b > c) {
+        int temp = b;
+        b = c;
+        c = temp;
+    }
+
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    // Imprime os valores em ordem crescente
+    printf("Os valores em ordem crescente são: %d, %d, %d\n", a, b, c);
+
+    return 0;
+}
