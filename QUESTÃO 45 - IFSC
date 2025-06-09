@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    int numeroConta;
+    float saldo, valorOperacao, novoSaldo;
+    char tipoOperacao;
+
+    // Leitura dos dados
+    printf("Digite o numero da conta: ");
+    scanf("%d", &numeroConta);
+
+    printf("Digite o saldo atual: R$ ");
+    scanf("%f", &saldo);
+
+    printf("Digite o tipo da operacao (D para deposito, R para retirada): ");
+    scanf(" %c", &tipoOperacao);
+    tipoOperacao = toupper(tipoOperacao);
+
+    printf("Digite o valor da operacao: R$ ");
+    scanf("%f", &valorOperacao);
+
+    // Processa a operação
+    if (tipoOperacao == 'D') {
+        novoSaldo = saldo + valorOperacao;
+    } else if (tipoOperacao == 'R') {
+        novoSaldo = saldo - valorOperacao;
+    } else {
+        printf("Tipo de operacao invalido!\n");
+        return 1;
+    }
+
+    // Mostra o novo saldo
+    printf("\nNumero da conta: %d\n", numeroConta);
+    printf("Saldo anterior: R$ %.2f\n", saldo);
+    printf("Novo saldo: R$ %.2f\n", novoSaldo);
+
+    // Verifica se saldo ficou negativo
+    if (novoSaldo < 0) {
+        printf("Conta estourada!\n");
+    }
+
+    return 0;
+}
