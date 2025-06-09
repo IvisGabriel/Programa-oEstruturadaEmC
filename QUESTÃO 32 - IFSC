@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+
+    // Lê o número
+    printf("Digite um número: ");
+    scanf("%d", &N);
+
+    // Verifica a faixa e imprime o resultado correspondente
+    if (N <= 10) {
+        printf("F1\n");
+    } else if (N <= 100) {
+        printf("F2\n");
+    } else {
+        printf("F3\n");
+    }
+
+    return 0;
+}
