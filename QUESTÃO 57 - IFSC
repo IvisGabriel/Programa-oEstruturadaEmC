@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Leitura dos valores
+    printf("Digite o valor de a: ");
+    scanf("%d", &a);
+
+    printf("Digite o valor de b: ");
+    scanf("%d", &b);
+
+    // Verifica se são múltiplos entre si
+    if (a % b == 0 || b % a == 0) {
+        printf("Sao multiplos\n");
+    } else {
+        printf("Nao sao multiplos\n");
+    }
+
+    return 0;
+}
