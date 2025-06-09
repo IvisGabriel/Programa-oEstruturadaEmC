@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c, menor;
+
+    // Entrada dos valores
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &c);
+
+    // Inicializa o menor com o primeiro valor
+    menor = a;
+
+    // Verifica se o segundo é menor
+    if (b < menor) {
+        menor = b;
+    }
+
+    // Verifica se o terceiro é menor
+    if (c < menor) {
+        menor = c;
+    }
+
+    // Exibe o menor número
+    printf("O menor numero eh: %d\n", menor);
+
+    return 0;
+}
