@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    int temp;
+
+    // Entrada dos três valores
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &b);
+
+    printf("Digite o terceiro valor: ");
+    scanf("%d", &c);
+
+    // Ordenação usando troca (bubble sort simples para 3 valores)
+    if (a > b) {
+        temp = a; a = b; b = temp;
+    }
+    if (a > c) {
+        temp = a; a = c; c = temp;
+    }
+    if (b > c) {
+        temp = b; b = c; c = temp;
+    }
+
+    // Exibe os valores em ordem crescente
+    printf("Valores em ordem crescente: %d, %d, %d\n", a, b, c);
+
+    return 0;
+}
