@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, nota3, media;
+    int opcao;
+
+    // Leitura das notas
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+
+    printf("Digite a terceira nota: ");
+    scanf("%f", &nota3);
+
+    // Leitura da opção de média
+    printf("Escolha o tipo de media:\n");
+    printf("1 - Media aritmetica\n");
+    printf("2 - Media ponderada (pesos 3, 3, 4)\n");
+    printf("Opcao: ");
+    scanf("%d", &opcao);
+
+    // Cálculo da média conforme opção
+    if (opcao == 1) {
+        media = (nota1 + nota2 + nota3) / 3.0;
+    } else if (opcao == 2) {
+        media = (nota1 * 3 + nota2 * 3 + nota3 * 4) / 10.0;
+    } else {
+        printf("Opcao invalida!\n");
+        return 1; // Finaliza o programa por opção inválida
+    }
+
+    // Exibe a média calculada
+    printf("Media calculada: %.2f\n", media);
+
+    return 0;
+}
