@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+    float nota_portugues, nota_matematica, nota_conhecimentos_gerais, media;
+
+    // Lê o nome do candidato
+    printf("Digite o nome do candidato: ");
+    fgets(nome, sizeof(nome), stdin);  // Usa fgets para ler o nome completo
+
+    // Lê as notas das três provas
+    printf("Digite a nota de Português: ");
+    scanf("%f", &nota_portugues);
+
+    printf("Digite a nota de Matemática: ");
+    scanf("%f", &nota_matematica);
+
+    printf("Digite a nota de Conhecimentos Gerais: ");
+    scanf("%f", &nota_conhecimentos_gerais);
+
+    // Calcula a média
+    media = (nota_portugues + nota_matematica + nota_conhecimentos_gerais) / 3;
+
+    // Exibe os dados do candidato
+    printf("\n--- Resultados do Candidato ---\n");
+    printf("Nome: %s", nome);
+    printf("Nota de Português: %.2f\n", nota_portugues);
+    printf("Nota de Matemática: %.2f\n", nota_matematica);
+    printf("Nota de Conhecimentos Gerais: %.2f\n", nota_conhecimentos_gerais);
+    printf("Média: %.2f\n", media);
+
+    // Verifica se o candidato foi aprovado ou reprovado
+    if (media > 7.0 && nota_portugues >= 5.0 && nota_matematica >= 5.0 && nota_conhecimentos_gerais >= 5.0) {
+        printf("O candidato foi APROVADO!\n");
+    } else {
+        printf("O candidato foi REPROVADO!\n");
+    }
+
+    return 0;
+}
