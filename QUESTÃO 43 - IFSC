@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char nome[50], categoria;
+    float salario, novoSalario, aumento;
+
+    // Leitura dos dados
+    printf("Digite o nome do funcionario: ");
+    scanf(" %[^\n]", nome);
+
+    printf("Digite a categoria do funcionario (letra maiuscula ou minuscula): ");
+    scanf(" %c", &categoria);
+
+    printf("Digite o salario atual do funcionario: R$ ");
+    scanf("%f", &salario);
+
+    // Converte categoria para maiúscula (caso seja digitada minúscula)
+    categoria = toupper(categoria);
+
+    // Determina o percentual de aumento
+    if (categoria == 'A' || categoria == 'C' || categoria == 'F' || categoria == 'H') {
+        aumento = 0.10;
+    } else if (categoria == 'B' || categoria == 'D' || categoria == 'E' || categoria == 'I' || categoria == 'J' || categoria == 'T') {
+        aumento = 0.15;
+    } else if (categoria == 'K' || categoria == 'R') {
+        aumento = 0.25;
+    } else if (categoria == 'L' || categoria == 'M' || categoria == 'N' || categoria == 'O' || categoria == 'P' || categoria == 'Q' || categoria == 'S') {
+        aumento = 0.35;
+    } else if (categoria == 'U' || categoria == 'V' || categoria == 'X' || categoria == 'Y' || categoria == 'W' || categoria == 'Z') {
+        aumento = 0.50;
+    } else {
+        printf("\nCategoria invalida!\n");
+        return 1; // Encerra o programa com erro
+    }
+
+    // Cálculo do novo salário
+    novoSalario = salario + (salario * aumento);
+
+    // Exibição dos resultados
+    printf("\n--- DADOS DO FUNCIONARIO ---\n");
+    printf("Nome: %s\n", nome);
+    printf("Categoria: %c\n", categoria);
+    printf("Salario reajustado: R$ %.2f\n", novoSalario);
+
+    return 0;
+}
