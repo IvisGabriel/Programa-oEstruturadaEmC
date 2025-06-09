@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int qtdTipo1, qtdTipo2, qtdTipo3;
+    float preco1 = 0.50, preco2 = 0.60, preco3 = 0.75;
+    float total1, total2, total3;
+
+    // Entrada de dados
+    printf("Digite a quantidade de picoles tipo 1 vendidos (R$0.50): ");
+    scanf("%d", &qtdTipo1);
+
+    printf("Digite a quantidade de picoles tipo 2 vendidos (R$0.60): ");
+    scanf("%d", &qtdTipo2);
+
+    printf("Digite a quantidade de picoles tipo 3 vendidos (R$0.75): ");
+    scanf("%d", &qtdTipo3);
+
+    // Cálculo dos totais arrecadados
+    total1 = qtdTipo1 * preco1;
+    total2 = qtdTipo2 * preco2;
+    total3 = qtdTipo3 * preco3;
+
+    // Saída dos resultados
+    printf("\n--- RELATORIO DE VENDAS ---\n");
+    printf("Tipo 1: %d vendidos - Total: R$ %.2f\n", qtdTipo1, total1);
+    printf("Tipo 2: %d vendidos - Total: R$ %.2f\n", qtdTipo2, total2);
+    printf("Tipo 3: %d vendidos - Total: R$ %.2f\n", qtdTipo3, total3);
+
+    return 0;
+}
