@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    // Leitura dos dois números
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    // Verificação de qual é o maior
+    if (num1 > num2) {
+        printf("O maior numero eh: %d\n", num1);
+    } else if (num2 > num1) {
+        printf("O maior numero eh: %d\n", num2);
+    } else {
+        printf("Os numeros sao iguais.\n");
+    }
+
+    return 0;
+}
