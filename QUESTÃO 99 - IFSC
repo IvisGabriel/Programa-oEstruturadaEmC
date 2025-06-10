@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int numFuncionarios, i;
+    float somaSalarios = 0, maiorSalario = 0, menorSalario;
+    
+    printf("Digite o numero de funcionarios: ");
+    scanf("%d", &numFuncionarios);
+    
+    // Criando variáveis para armazenar os nomes dos funcionários
+    char nomes[numFuncionarios][50];
+    float salarios[numFuncionarios];
+
+    for (i = 0; i < numFuncionarios; i++) {
+        printf("\nDigite o nome do funcionario %d: ", i + 1);
+        scanf(" %[^\n]", nomes[i]); // Lê o nome com espaços
+        printf("Digite o salario de %s: ", nomes[i]);
+        scanf("%f", &salarios[i]);
+
+        somaSalarios += salarios[i];
+
+        if (i == 0) {
+            menorSalario = salarios[i];
+        }
+
+        if (salarios[i] > maiorSalario) {
+            maiorSalario = salarios[i];
+        }
+        if (salarios[i] < menorSalario) {
+            menorSalario = salarios[i];
+        }
+    }
+
+    float media = somaSalarios / numFuncionarios;
+
+    printf("\nMedia salarial: %.2f\n", media);
+    printf("Maior salario: %.2f\n", maiorSalario);
+    printf("Menor salario: %.2f\n", menorSalario);
+
+    return 0;
+}
