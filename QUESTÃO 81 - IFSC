@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <ctype.h>  // para usar a função tolower()
+
+int main() {
+    char letra;
+
+    printf("Digite uma letra do alfabeto: ");
+    scanf(" %c", &letra);
+
+    // Converte para minúscula para facilitar a comparação
+    letra = tolower(letra);
+
+    // Verifica se é uma letra válida
+    if ((letra >= 'a' && letra <= 'z')) {
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+            printf("A letra %c é uma vogal.\n", letra);
+        } else {
+            printf("A letra %c é uma consoante.\n", letra);
+        }
+    } else {
+        printf("Erro: não é uma letra válida do alfabeto.\n");
+    }
+
+    return 0;
+}
