@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int termo = 3, soma = 0;
+
+    printf("Progressao Geometrica:\n");
+
+    while (termo <= 6561) {
+        printf("%d ", termo); // Exibe o termo
+        soma += termo; // Adiciona o termo à soma
+        termo *= 3; // Multiplica o termo por 3 para obter o próximo
+    }
+
+    printf("\nSoma dos termos: %d\n", soma);
+
+    return 0;
+}
