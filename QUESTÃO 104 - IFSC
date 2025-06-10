@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, resultado = 0;
+
+    // Solicita os números ao usuário
+    printf("Digite dois numeros inteiros:\n");
+    scanf("%d %d", &num1, &num2);
+
+    // Se num2 for negativo, converte a lógica para trabalhar corretamente
+    int negativo = 0;
+    if (num2 < 0) {
+        num2 = -num2;
+        negativo = 1;
+    }
+
+    // Soma repetida para simular a multiplicação
+    for (int i = 0; i < num2; i++) {
+        resultado += num1;
+    }
+
+    // Se num2 era negativo, ajusta o sinal do resultado
+    if (negativo) {
+        resultado = -resultado;
+    }
+
+    // Exibe o resultado
+    printf("Resultado da multiplicacao: %d\n", resultado);
+
+    return 0;
+}
