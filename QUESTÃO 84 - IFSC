@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int numeroConta;
+    char nome[100];
+    float saldo, valor;
+    char tipoMov;
+
+    // Dados iniciais da conta
+    printf("Digite o número da conta: ");
+    scanf("%d", &numeroConta);
+
+    printf("Digite o nome do titular: ");
+    scanf(" %[^\n]", nome);  // Lê nome com espaços
+
+    printf("Digite o saldo inicial: ");
+    scanf("%f", &saldo);
+
+    // Tipo de movimentação
+    printf("Digite o tipo de movimentação (D para depósito, R para retirada): ");
+    scanf(" %c", &tipoMov);
+
+    // Valor da movimentação
+    printf("Digite o valor da movimentação: ");
+    scanf("%f", &valor);
+
+    // Atualizar saldo
+    if (tipoMov == 'D' || tipoMov == 'd') {
+        saldo += valor;
+    } else if (tipoMov == 'R' || tipoMov == 'r') {
+        saldo -= valor;
+    } else {
+        printf("Tipo de movimentação inválido.\n");
+        return 1; // Sai do programa com erro
+    }
+
+    // Mostrar saldo atualizado
+    printf("\nConta: %d\n", numeroConta);
+    printf("Titular: %s\n", nome);
+    printf("Saldo atualizado: R$ %.2f\n", saldo);
+
+    return 0;
+}
