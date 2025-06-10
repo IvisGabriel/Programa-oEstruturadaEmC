@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nome1[50], nome2[50];
+    float altura1, altura2, peso1, peso2;
+
+    // Leitura dos dados da primeira pessoa
+    printf("Digite o nome da primeira pessoa: ");
+    scanf(" %[^\n]", nome1);  // Lê até a quebra de linha
+    printf("Digite a altura de %s (em metros): ", nome1);
+    scanf("%f", &altura1);
+    printf("Digite o peso de %s (em kg): ", nome1);
+    scanf("%f", &peso1);
+
+    // Leitura dos dados da segunda pessoa
+    printf("\nDigite o nome da segunda pessoa: ");
+    scanf(" %[^\n]", nome2);
+    printf("Digite a altura de %s (em metros): ", nome2);
+    scanf("%f", &altura2);
+    printf("Digite o peso de %s (em kg): ", nome2);
+    scanf("%f", &peso2);
+
+    // Verifica e imprime a pessoa mais pesada
+    if (peso1 > peso2) {
+        printf("\nPessoa mais pesada: %s\n", nome1);
+    } else if (peso2 > peso1) {
+        printf("\nPessoa mais pesada: %s\n", nome2);
+    } else {
+        printf("\nAs duas pessoas têm o mesmo peso.\n");
+    }
+
+    // Verifica e imprime a pessoa mais alta
+    if (altura1 > altura2) {
+        printf("Pessoa mais alta: %s\n", nome1);
+    } else if (altura2 > altura1) {
+        printf("Pessoa mais alta: %s\n", nome2);
+    } else {
+        printf("As duas pessoas têm a mesma altura.\n");
+    }
+
+    return 0;
+}
