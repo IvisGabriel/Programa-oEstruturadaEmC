@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    double massa;
+    int tempo = 0;
+
+    // Solicita a massa inicial ao usuário
+    printf("Digite a massa inicial do material (em gramas): ");
+    scanf("%lf", &massa);
+
+    // Calcula o tempo necessário para a massa ser menor que 0,05 gramas
+    while (massa >= 0.05) {
+        massa /= 2;  // Reduz a massa pela metade
+        tempo += 50; // Incrementa 50 segundos
+    }
+
+    // Exibe o resultado
+    printf("Tempo necessario para a massa ser menor que 0.05 gramas: %d segundos\n", tempo);
+
+    return 0;
+}
