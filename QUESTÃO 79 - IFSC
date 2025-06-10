@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    char estadoCivil;
+
+    printf("Digite a primeira letra do estado civil (S, C, V, D, E): ");
+    scanf(" %c", &estadoCivil);
+
+    // Converter para maiúscula para facilitar a comparação
+    if (estadoCivil >= 'a' && estadoCivil <= 'z') {
+        estadoCivil = estadoCivil - ('a' - 'A');
+    }
+
+    switch (estadoCivil) {
+        case 'S':
+            printf("Estado civil: Solteiro\n");
+            break;
+        case 'C':
+            printf("Estado civil: Casado\n");
+            break;
+        case 'V':
+            printf("Estado civil: Viúvo\n");
+            break;
+        case 'D':
+            printf("Estado civil: Divorciado\n");
+            break;
+        case 'E':
+            printf("Estado civil: Desquitado\n");
+            break;
+        default:
+            printf("Erro: Estado civil inválido.\n");
+    }
+
+    return 0;
+}
