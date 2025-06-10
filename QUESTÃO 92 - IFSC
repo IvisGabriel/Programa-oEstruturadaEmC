@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int N, A = 1;
+    printf("Digite o valor de N: ");
+    scanf("%d", &N);
+    for (int i = 1; i <= N; i++) {
+        A += i * i;
+    }
+    printf("Valor de A: %d\n", A);
+    return 0;
+}
