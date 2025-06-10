@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int numClientes, i;
+    float totalHotel = 0;
+    
+    printf("Digite o numero de clientes: ");
+    scanf("%d", &numClientes);
+
+    char nome[50];
+    int diarias;
+    float taxaServico, totalConta;
+
+    for (i = 0; i < numClientes; i++) {
+        printf("\nDigite o nome do cliente %d: ", i + 1);
+        scanf(" %[^\n]", nome); // Lê o nome com espaços
+        printf("Digite o numero de diarias para %s: ", nome);
+        scanf("%d", &diarias);
+
+        // Determina a taxa de serviço
+        if (diarias < 15) {
+            taxaServico = 4.00;
+        } else if (diarias == 15) {
+            taxaServico = 3.60;
+        } else {
+            taxaServico = 3.00;
+        }
+
+        // Calcula o total da conta
+        totalConta = (50.00 + taxaServico) * diarias;
+        totalHotel += totalConta;
+
+        // Exibe os resultados
+        printf("\nCliente: %s\nTotal da conta: R$ %.2f\n", nome, totalConta);
+    }
+
+    printf("\nTotal ganho pelo hotel: R$ %.2f\n", totalHotel);
+
+    return 0;
+}
