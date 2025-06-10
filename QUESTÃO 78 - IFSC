@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+void ordenar_crescente(float *a, float *b, float *c) {
+    float temp;
+    if (*a > *b) { temp = *a; *a = *b; *b = temp; }
+    if (*b > *c) { temp = *b; *b = *c; *c = temp; }
+    if (*a > *b) { temp = *a; *a = *b; *b = temp; }
+}
+
+void ordenar_decrescente(float *a, float *b, float *c) {
+    float temp;
+    if (*a < *b) { temp = *a; *a = *b; *b = temp; }
+    if (*b < *c) { temp = *b; *b = *c; *c = temp; }
+    if (*a < *b) { temp = *a; *a = *b; *b = temp; }
+}
+
+int main() {
+    int I;
+    float A, B, C;
+    float maior, meio, menor;
+
+    printf("Digite o valor de I (1, 2 ou 3): ");
+    scanf("%d", &I);
+
+    if (I < 1 || I > 3) {
+        printf("I não é um dos valores esperados (1, 2 ou 3).\n");
+        return 0;
+    }
+
+    printf("Digite o valor de A: ");
+    scanf("%f", &A);
+
+    printf("Digite o valor de B: ");
+    scanf("%f", &B);
+
+    printf("Digite o valor de C: ");
+    scanf("%f", &C);
+
+    printf("Valores lidos: A=%.2f, B=%.2f, C=%.2f\n", A, B, C);
+
+    if (I == 1) {
+        // Ordem crescente
+        ordenar_crescente(&A, &B, &C);
+        printf("Ordem crescente: %.2f %.2f %.2f\n", A, B, C);
+    }
+    else if (I == 2) {
+        // Ordem decrescente
+        ordenar_decrescente(&A, &B, &C);
+        printf("Ordem decrescente: %.2f %.2f %.2f\n", A, B, C);
+    }
+    else if (I == 3) {
+        // Colocar o maior valor entre os outros dois
+        // Vamos identificar maior, menor e meio
+        // e imprimir na ordem: menor, maior, meio  OU meio, maior, menor
+
+        // Primeiro, achar o maior
+        if
