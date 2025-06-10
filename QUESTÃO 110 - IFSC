@@ -1,0 +1,30 @@
+(ENQUANTO- FACA) 
+#include <stdio.h>
+
+int main() {
+    int x = 1, soma = 0;
+
+    while (x <= 10) {
+        soma += x;
+        x++;
+    }
+
+    printf("Soma dos inteiros de 1 a 10: %d\n", soma);
+
+    return 0;
+}
+(REPITA -FACA)
+#include <stdio.h>
+
+int main() {
+    int x = 1, soma = 0;
+
+    do {
+        soma += x;
+        x++;
+    } while (x <= 10);
+
+    printf("Soma dos inteiros de 1 a 10: %d\n", soma);
+
+    return 0;
+}
