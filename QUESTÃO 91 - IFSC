@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int soma = 0;
+    for (int i = 86; i < 907; i += 2) {
+        printf("%d\n", i);
+        soma += i;
+    }
+    printf("Soma dos pares: %d\n", soma);
+    return 0;
+}
