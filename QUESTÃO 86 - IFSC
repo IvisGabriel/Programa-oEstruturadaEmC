@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int mes;
+    printf("Digite o número do mês (1 a 12): ");
+    scanf("%d", &mes);
+
+    if (mes < 1 || mes > 12) {
+        printf("Mês inválido.\n");
+        return 1;
+    }
+
+    char* estacao;
+
+    if (mes == 1 || mes == 2 || mes == 3)
+        estacao = "Verão";
+    else if (mes >= 4 && mes <= 6)
+        estacao = "Outono";
+    else if (mes >= 7 && mes <= 9)
+        estacao = "Inverno";
+    else
+        estacao = "Primavera";
+
+    printf("A estação do ano correspondente ao mês %d é %s\n", mes, estacao);
+
+    return 0;
+}
