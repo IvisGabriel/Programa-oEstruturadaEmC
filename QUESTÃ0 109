@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int num, pares = 0, impares = 0;
+
+    printf("Digite uma sequencia de numeros inteiros (9999 para parar):\n");
+
+    while (1) {
+        scanf("%d", &num);
+
+        if (num == 9999) {
+            break; // Finaliza a leitura ao encontrar a sentinela
+        }
+
+        if (num % 2 == 0) {
+            pares++; // Incrementa a contagem de pares
+        } else {
+            impares++; // Incrementa a contagem de ímpares
+        }
+    }
+
+    printf("\nQuantidade de numeros pares: %d\n", pares);
+    printf("Quantidade de numeros impares: %d\n", impares);
+
+    return 0;
+}
