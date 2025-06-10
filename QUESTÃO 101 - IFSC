@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fatorial = 1; // Usa um tipo maior para evitar estouro
+
+    printf("Digite um numero inteiro para calcular o fatorial: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Nao existe fatorial de numero negativo.\n");
+    } else {
+        for (i = 1; i <= n; i++) {
+            fatorial *= i;
+        }
+        printf("O fatorial de %d eh %llu\n", n, fatorial);
+    }
+
+    return 0;
+}
