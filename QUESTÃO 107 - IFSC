@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int num, maximo;
+    int primeiro = 1; // Variável para definir o primeiro número como referência
+
+    printf("Digite uma sequencia de numeros inteiros (9999 para parar):\n");
+
+    while (1) {
+        scanf("%d", &num);
+
+        if (num == 9999) {
+            break; // Encerra a leitura ao encontrar o valor sentinela
+        }
+
+        // Define o primeiro número como máximo inicial
+        if (primeiro) {
+            maximo = num;
+            primeiro = 0;
+        } else if (num > maximo) {
+            maximo = num;
+        }
+    }
+
+    if (!primeiro) { // Verifica se algum número válido foi inserido
+        printf("\nMaior numero = %d\n", maximo);
+    } else {
+        printf("\nNenhum numero valido foi inserido.\n");
+    }
+
+    return 0;
+}
