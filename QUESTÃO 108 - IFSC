@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, quociente = 0, resto;
+
+    // Solicita os números ao usuário
+    printf("Digite dois numeros inteiros positivos:\n");
+    scanf("%d %d", &num1, &num2);
+
+    // Verifica se os números são válidos
+    if (num1 < 0 || num2 <= 0) {
+        printf("Os numeros devem ser inteiros positivos e num2 deve ser maior que zero.\n");
+        return 1;
+    }
+
+    resto = num1; // Inicializa o resto com num1
+
+    // Subtrai num2 repetidamente de num1 para calcular quociente e resto
+    while (resto >= num2) {
+        resto -= num2;
+        quociente++;
+    }
+
+    // Exibe os resultados
+    printf("Quociente: %d\n", quociente);
+    printf("Resto: %d\n", resto);
+
+    return 0;
+}
