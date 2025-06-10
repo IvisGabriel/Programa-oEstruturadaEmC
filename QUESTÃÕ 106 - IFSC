@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int num, soma = 0, contador = 0;
+    float media;
+
+    printf("Digite uma sequencia de numeros inteiros (9999 para parar):\n");
+
+    while (1) {
+        scanf("%d", &num);
+
+        if (num == 9999) {
+            break; // Interrompe a leitura quando o valor sentinela é digitado
+        }
+
+        soma += num;
+        contador++;
+    }
+
+    if (contador > 0) {
+        media = (float)soma / contador;
+        printf("\nSoma = %d\n", soma);
+        printf("Media = %.2f\n", media);
+    } else {
+        printf("\nNenhum numero valido foi inserido.\n");
+    }
+
+    return 0;
+}
