@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+// Função que verifica se o número é par
+int ehPar(int numero) {
+    return numero % 2 == 0;
+}
+
+int main() {
+    int num;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    if (ehPar(num)) {
+        printf("Verdadeiro (o numero e par).\n");
+    } else {
+        printf("Falso (o numero e impar).\n");
+    }
+
+    return 0;
+}
