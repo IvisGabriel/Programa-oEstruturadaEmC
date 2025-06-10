@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+    int dia, mes, signo = 0;
+
+    printf("Digite o dia do seu nascimento: ");
+    scanf("%d", &dia);
+
+    printf("Digite o mes do seu nascimento (numero): ");
+    scanf("%d", &mes);
+
+    // Verificação do signo
+    if ((mes == 1 && dia >= 21) || (mes == 2 && dia <= 19)) {
+        signo = 1; // Aquário
+        printf("Voce e do seguinte signo do zodiaco: Aquario\n");
+    } else if ((mes == 2 && dia >= 20) || (mes == 3 && dia <= 20)) {
+        signo = 2; // Peixes
+        printf("Voce e do seguinte signo do zodiaco: Peixes\n");
+    } else if ((mes == 3 && dia >= 21) || (mes == 4 && dia <= 20)) {
+        signo = 3; // Áries
+        printf("Voce e do seguinte signo do zodiaco: Aries\n");
+    } else if ((mes == 4 && dia >= 21) || (mes == 5 && dia <= 20)) {
+        signo = 4; // Touro
+        printf("Voce e do seguinte signo do zodiaco: Touro\n");
+    } else if ((mes == 5 && dia >= 21) || (mes == 6 && dia <= 20)) {
+        signo = 5; // Gêmeos
+        printf("Voce e do seguinte signo do zodiaco: Gemeos\n");
+    } else if ((mes == 6 && dia >= 21) || (mes == 7 && dia <= 21)) {
+        signo = 6; // Câncer
+        printf("Voce e do seguinte signo do zodiaco: Cancer\n");
+    } else if ((mes == 7 && dia >= 22) || (mes == 8 && dia <= 22)) {
+        signo = 7; // Leão
+        printf("Voce e do seguinte signo do zodiaco: Leao\n");
+    } else if ((mes == 8 && dia >= 23) || (mes == 9 && dia <= 22)) {
+        signo = 8; // Virgem
+        printf("Voce e do seguinte signo do zodiaco: Virgem\n");
+    } else if ((mes == 9 && dia >= 23) || (mes == 10 && dia <= 22)) {
+        signo = 9; // Libra
+        printf("Voce e do seguinte signo do zodiaco: Libra\n");
+    } else if ((mes == 10 && dia >= 23) || (mes == 11 && dia <= 21)) {
+        signo = 10; // Escorpião
+        printf("Voce e do seguinte signo do zodiaco: Escorpiao\n");
+    } else if ((mes == 11 && dia >= 22) || (mes == 12 && dia <= 21)) {
+        signo = 11; // Sagitário
+        printf("Voce e do seguinte signo do zodiaco: Sagitario\n");
+    } else if ((mes == 12 && dia >= 22) || (mes == 1 && dia <= 20)) {
+        signo = 12; // Capricórnio
+        printf("Voce e do seguinte signo do zodiaco: Capricornio\n");
+    } else {
+        printf("Data invalida.\n");
+    }
+
+    return 0;
+}
