@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int mes, ano, dias;
+
+    printf("Digite o mês (1 a 12): ");
+    scanf("%d", &mes);
+
+    printf("Digite o ano: ");
+    scanf("%d", &ano);
+
+    // Verifica se o ano é bissexto
+    int bissexto = 0;
+    if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)) {
+        bissexto = 1;
+    }
+
+    // Determina o número de dias do mês
+    switch (mes) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            dias = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            dias = 30;
+            break;
+        case 2:
+            if (bissexto) {
+                dias = 29;
+            } else {
+                dias = 28;
+            }
+            break;
+        default:
+            printf("Mês inválido!\n");
+            return 1;
+    }
+
+    printf("O mês %d do ano %d tem %d dias.\n", mes, ano, dias);
+
+    return 0;
+}
